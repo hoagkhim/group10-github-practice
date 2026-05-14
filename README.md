@@ -1,3 +1,5 @@
 # group10-github-practice
 
 Thanh vien 1 dang sua file nay
+
+thanh vien 2 da sua file nay
