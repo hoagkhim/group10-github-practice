@@ -26,7 +26,13 @@ def search_student(keyword):
 
 def delete_student(student_id):
     """
-    TODO: THÀNH VIÊN 4
-    Nhiệm vụ: Tìm và xóa sinh viên có student_id khỏi students_db
-    """
+    # TODO: THÀNH VIÊN 4
+    # Nhiệm vụ: Tìm và xóa sinh viên có student_id khỏi students_db
+    # """
+    for i, st in enumerate(students_db):
+        if st['id'] == student_id:
+            del students_db[i]
+            print(f"✅ Đã xóa sinh viên có ID '{student_id}' thành công!")
+            return
+    print(f"⚠️ Không tìm thấy sinh viên với ID '{student_id}'!")
     pass

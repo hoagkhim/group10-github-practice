@@ -27,6 +27,9 @@ def main():
         elif choice == '4':
             print("\n[Chức năng đang được phát triển bởi Thành viên 4]")
             # TODO: Nhập ID và gọi delete_student()
+            print("\n--- XÓA SINH VIÊN ---")
+            student_id = input("Nhập ID sinh viên cần xóa: ")
+            delete_student(student_id)
         elif choice == '5':
             print("Tạm biệt!")
             break
