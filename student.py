@@ -2,11 +2,13 @@
 students_db = []
 
 def add_student(student_id, name, age):
-    """
-    TODO: THÀNH VIÊN 1
-    Nhiệm vụ: Tạo một dictionary chứa thông tin sinh viên và thêm vào students_db
-    """
-    pass
+    student = {
+        "id": student_id,
+        "name": name,
+        "age": age
+    }
+    students_db.append(student)
+    print(f"✅ Đã thêm sinh viên '{name}' thành công!")
 
 def display_students():
     """
