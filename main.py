@@ -13,17 +13,23 @@ def main():
         choice = input("Chọn chức năng (1-5): ")
         
         if choice == '1':
-            print("\n[Chức năng đang được phát triển bởi Thành viên 1]")
-            # TODO: Nhập thông tin sinh viên và gọi add_student()
+            print("\n--- THÊM SINH VIÊN ---")
+            student_id = input("Nhập ID sinh viên: ")
+            name = input("Nhập tên sinh viên: ")
+            age = input("Nhập tuổi: ")
+            add_student(student_id, name, age)
         elif choice == '2':
-            print("\n[Chức năng đang được phát triển bởi Thành viên 2]")
-            # TODO: Gọi display_students()
+            print("\n--- HIỂN THỊ DANH SÁCH ---")
+            display_students()
         elif choice == '3':
             print("\n[Chức năng đang được phát triển bởi Thành viên 3]")
             # TODO: Nhập từ khóa và gọi search_student()
         elif choice == '4':
             print("\n[Chức năng đang được phát triển bởi Thành viên 4]")
             # TODO: Nhập ID và gọi delete_student()
+            print("\n--- XÓA SINH VIÊN ---")
+            student_id = input("Nhập ID sinh viên cần xóa: ")
+            delete_student(student_id)
         elif choice == '5':
             print("Tạm biệt!")
             break
