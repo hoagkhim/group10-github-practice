@@ -10,19 +10,14 @@ def add_student(student_id, name, age):
     students_db.append(student)
     print(f"✅ Đã thêm sinh viên '{name}' thành công!")
 
-def display_students():
-    """
-    TODO: THÀNH VIÊN 2
-    Nhiệm vụ: Kiểm tra nếu danh sách trống thì báo lỗi, nếu có thì in ra danh sách
-    """
-    pass
 
-def search_student(keyword):
-    """
-    TODO: THÀNH VIÊN 3
-    Nhiệm vụ: Tìm sinh viên có tên hoặc id trùng với keyword và in ra
-    """
-    pass
+def display_students():
+    if not students_db:
+        print("⚠️ Danh sách sinh viên hiện đang trống!")
+        return
+    print("\nDanh sách sinh viên:")
+    for st in students_db:
+        print(f"ID: {st['id']} | Tên: {st['name']} | Tuổi: {st['age']}")
 
 def delete_student(student_id):
     """
