@@ -16,11 +16,14 @@ def display_students():
     pass
 
 def search_student(keyword):
-    """
-    TODO: THÀNH VIÊN 3
-    Nhiệm vụ: Tìm sinh viên có tên hoặc id trùng với keyword và in ra
-    """
-    pass
+    found = False
+    print(f"\nKết quả tìm kiếm cho '{keyword}':")
+    for st in students_db:
+        if keyword.lower() in st['name'].lower() or keyword == st['id']:
+            print(f"ID: {st['id']} | Tên: {st['name']} | Tuổi: {st['age']}")
+            found = True
+    if not found:
+        print("⚠️ Không tìm thấy sinh viên nào!")
 
 def delete_student(student_id):
     """
