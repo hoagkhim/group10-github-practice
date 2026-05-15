@@ -10,7 +10,16 @@ def add_student(student_id, name, age):
     students_db.append(student)
     print(f"✅ Đã thêm sinh viên '{name}' thành công!")
 
-
+def search_student(keyword):
+    found = False
+    print(f"\nKết quả tìm kiếm cho '{keyword}':")
+    for st in students_db:
+        if keyword.lower() in st['name'].lower() or keyword == st['id']:
+            print(f"ID: {st['id']} | Tên: {st['name']} | Tuổi: {st['age']}")
+            found = True
+    if not found:
+        print("⚠️ Không tìm thấy sinh viên nào!")
+        
 def display_students():
     if not students_db:
         print("⚠️ Danh sách sinh viên hiện đang trống!")
