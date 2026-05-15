@@ -19,8 +19,8 @@ def main():
             age = input("Nhập tuổi: ")
             add_student(student_id, name, age)
         elif choice == '2':
-            print("\n[Chức năng đang được phát triển bởi Thành viên 2]")
-            # TODO: Gọi display_students()
+            print("\n--- HIỂN THỊ DANH SÁCH ---")
+            display_students()
         elif choice == '3':
             print("\n[Chức năng đang được phát triển bởi Thành viên 3]")
             # TODO: Nhập từ khóa và gọi search_student()
